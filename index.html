@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Google tag (gtag.js) -->
+      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W7SLRDW4G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,8 +12,10 @@
 </script>
         <meta charset="utf-8">
         <title>Sulphur Crested Cockatoos</title>
-         <link rel="shortcut icon"
+        <link rel="shortcut icon"
  href="https://www.emoji.com/wp-content/uploads/filebase/thumbnails/icons/emoji-icon-glossy-03-01-animals-nature-animal-bird-sulphur-crested-cockatoo-72dpi-forPersonalUseOnly.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
         
             body {
@@ -167,12 +169,24 @@
     </form>
     <div id="result"></div>
     </div>
+    <div id="sccq4"><h2 class="sccqh">Sulphur Crested Cockatoo Quiz</h2>
+    
+    <form id="trivia-form4">
+        <label>
+            How many dance moves does Snowball have?<br>
+  <input type="text" id="sMoves" name="fname"><br>
+        </label> <br>
+        <div class="button-div"><button class="sub-button" type="submit">Check Answer</button></div>
+    </form>
+    <div id="result"></div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
     var correctAns = 0;
     $('#sccq1').hide();
     $('#sccq2').hide();
     $('#sccq3').hide();
+    $('#sccq4').hide();
     $('#start').on('click', function() {
         $('#sccq1').show();
     })
@@ -211,6 +225,67 @@ $('#sccq2').hide();
 }
 
 });
+$("#trivia-form4").on("submit",function(event){
+event.preventDefault();
+var $doNum = $(this).find("[name=fname]");
+        var doNum = $doNum.val();
+if(doNum === "14"){
+correctAns += 1;
+$('#sccq4').hide();
+    console.log(correctAns);
+}
+else {
+    if (correctAns === 4) {
+        $('#quizPara').html('4 out of 4 great job!')
+$('#start').html('Try again');
+    }
+    if (correctAns === 3) {
+    
+$('#quizPara').html('3 out of 4 so close job!')
+$('#start').html('Try again');
+}
+if (correctAns === 2) {
+    
+$('#quizPara').html('2 out of 4 50%!')
+$('#start').html('Try again');
+}
+if (correctAns === 1) {
+    
+$('#quizPara').html('1 out of 4 keep practicing!')
+$('#start').html('Try again');
+}
+if (correctAns === 0) {
+    
+$('#quizPara').html('0 out of 4 try again')
+$('#start').html('Try again');
+}
+}
+$('#sccq4').hide()
+if (correctAns === 4) {
+        $('#quizPara').html('4 out of 4 great job!')
+$('#start').html('Try again');
+    }
+    if (correctAns === 3) {
+    
+$('#quizPara').html('3 out of 4 so close!')
+$('#start').html('Try again');
+}
+if (correctAns === 2) {
+    
+$('#quizPara').html('2 out of 4 50%!')
+$('#start').html('Try again');
+}
+if (correctAns === 1) {
+    
+$('#quizPara').html('1 out of 4 keep practicing!')
+$('#start').html('Try again');
+}
+if (correctAns === 0) {
+    
+$('#quizPara').html('0 out of 4 try again')
+$('#start').html('Try again');
+}
+});
 $("#trivia-form3").on("submit",function(event){
 event.preventDefault();
 var $answer = $("#trivia-answer3");
@@ -218,52 +293,17 @@ var answer = $answer.val();
 
 if(answer === "resig"){
 correctAns += 1;
-if (correctAns === 3) {
-    
-$('#quizPara').html('3 out of 3 great job!')
-$('#start').html('Try again');
-}
-if (correctAns === 2) {
-    
-$('#quizPara').html('2 out of 3 so close!')
-$('#start').html('Try again');
-}
-if (correctAns === 1) {
-    
-$('#quizPara').html('1 out of 3 keep practicing!')
-$('#start').html('Try again');
-}
-if (correctAns === 0) {
-    
-$('#quizPara').html('0 out of 3 try again')
-$('#start').html('Try again');
-}
+$('#sccq3').hide();
+$('#sccq4').show();
+
 $('#sccq3').hide();
     console.log(correctAns);
     
 }
 else {
-if (correctAns === 3) {
-    
-$('#quizPara').html('3 out of 3 great job!')
-$('#start').html('Try again');
-}
-if (correctAns === 2) {
-    
-$('#quizPara').html('2 out of 3 so close!')
-$('#start').html('Try again');
-}
-if (correctAns === 1) {
-    
-$('#quizPara').html('1 out of 3 keep practicing!')
-$('#start').html('Try again');
-}
-if (correctAns === 0) {
-    
-$('#quizPara').html('0 out of 3 try again')
-$('#start').html('Try again');
-}
+
 $('#sccq3').hide();
+$('#sccq4').show();
 }
 
 });
